@@ -23,8 +23,7 @@
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
 	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\TemplateDapr.Infrastructure\TemplateDapr.Infrastructure.csproj" />
-  </ItemGroup>
-
+	<ItemGroup>
+	  <ProjectReference Include="..\..\TemplateDapr\TemplateDapr.Infrastructure\TemplateDapr.Infrastructure.csproj" />
+	</ItemGroup>
 </Project>

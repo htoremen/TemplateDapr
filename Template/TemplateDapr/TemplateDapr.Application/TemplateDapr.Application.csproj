@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\core\TemplateDapr.Core.Common\TemplateDapr.Core.Common.csproj" />
+    <ProjectReference Include="..\..\core\TemplateDapr.Core.Common\TemplateDapr.Core.Common.csproj" />
     <ProjectReference Include="..\TemplateDapr.Domain\TemplateDapr.Domain.csproj" />
   </ItemGroup>
 

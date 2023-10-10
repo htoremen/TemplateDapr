@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\core\TemplateDapr.Core.Infrastructure\TemplateDapr.Core.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\core\TemplateDapr.Core.Infrastructure\TemplateDapr.Core.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
