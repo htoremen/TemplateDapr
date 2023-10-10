@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateDapr.Core.Infrastru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateDapr.Migration.App", "Template\migration\TemplateDapr.Migration.App\TemplateDapr.Migration.App.csproj", "{8574BFC4-D10F-4FBE-AF4D-540CB0E31858}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateDapr.API", "Template\TemplateDapr.API\TemplateDapr.API.csproj", "{90E13F14-FEED-46FD-99D1-4849D0664BEE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{8574BFC4-D10F-4FBE-AF4D-540CB0E31858}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8574BFC4-D10F-4FBE-AF4D-540CB0E31858}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8574BFC4-D10F-4FBE-AF4D-540CB0E31858}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90E13F14-FEED-46FD-99D1-4849D0664BEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90E13F14-FEED-46FD-99D1-4849D0664BEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90E13F14-FEED-46FD-99D1-4849D0664BEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90E13F14-FEED-46FD-99D1-4849D0664BEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -98,6 +104,7 @@ Global
 		{97E97DBE-C8B9-4BA1-B1C7-47D8E2BD84D0} = {D2AD7BCA-3326-4E68-897D-43D695F599B3}
 		{21D5DAD7-89A6-4B79-AF62-BC8240CA0D4D} = {D2AD7BCA-3326-4E68-897D-43D695F599B3}
 		{8574BFC4-D10F-4FBE-AF4D-540CB0E31858} = {697D335D-35CB-49DB-88E2-BD3B38CE75DD}
+		{90E13F14-FEED-46FD-99D1-4849D0664BEE} = {629E074C-F099-4A01-8B9B-B0F44E2081D7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D03AD894-6123-4825-A90D-0A13884ED4DB}
