@@ -15,7 +15,6 @@ public class ParameterController : ControllerBase
         this.logger = logger;
     }
 
-
     [HttpGet("get-parameter")]
     public async Task<GenericResponse<ParameterEvent>> GetParameter(ParameterEvent parameter)
     {
@@ -28,7 +27,6 @@ public class ParameterController : ControllerBase
 
         return response;
     }
-
 
     [Topic("pubsub", "create-parameter")]
     [HttpPost("create-parameter")]
