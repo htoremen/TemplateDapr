@@ -15,11 +15,26 @@ public class ParameterController : ControllerBase
         this.logger = logger;
     }
 
-    [Topic("pubsub", "payments")]
+
     [HttpGet("get-parameter")]
     public async Task<GenericResponse<ParameterEvent>> GetParameter(ParameterEvent parameter)
     {
-        logger.LogInformation($"{parameter.Name} message from TemplateDaprAPI service");
+        logger.LogInformation($"GetParameter : {parameter.Name} message from TemplateDaprAPI service");
+
+        var response = new GenericResponse<ParameterEvent>
+        {
+            Data = parameter
+        };
+
+        return response;
+    }
+
+
+    [Topic("pubsub", "create-parameter")]
+    [HttpPost("create-parameter")]
+    public async Task<GenericResponse<ParameterEvent>> CreateParameter(ParameterEvent parameter)
+    {
+        logger.LogInformation($"CreateParameter : {parameter.Name} message from TemplateDaprAPI service");
 
         var response = new GenericResponse<ParameterEvent>
         {
