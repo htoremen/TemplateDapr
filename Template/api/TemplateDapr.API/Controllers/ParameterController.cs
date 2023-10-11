@@ -19,7 +19,7 @@ public class ParameterController : ControllerBase
     [HttpGet("get-parameter")]
     public async Task<GenericResponse<ParameterEvent>> GetParameter(ParameterEvent parameter)
     {
-        var response = await _daprClient.InvokeMethodAsync<GenericResponse<ParameterEvent>>(HttpMethod.Get, "TemplateDaprAPI", "get-parameter");
+        var response = await _daprClient.InvokeMethodAsync<GenericResponse<ParameterEvent>>(HttpMethod.Get, "TemplateDaprService", "get-parameter");
         return response;
     }
 }

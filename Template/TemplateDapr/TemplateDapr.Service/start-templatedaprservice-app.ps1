@@ -1,0 +1,1 @@
+dapr run --app-id TemplateDaprService --app-port 7012 --dapr-http-port 7112 --dapr-grpc-port 7212 --resources-path ../dapr/components dotnet run
