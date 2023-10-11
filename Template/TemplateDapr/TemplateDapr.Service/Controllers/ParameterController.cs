@@ -5,8 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Service.Controllers;
 
-[ApiController]
 [Route("[controller]")]
+[ApiController]
 public class ParameterController : ControllerBase
 {
     private readonly ILogger<ParameterController> logger;
@@ -15,14 +15,16 @@ public class ParameterController : ControllerBase
         this.logger = logger;
     }
 
-    [HttpGet("get-parameter")]
-    public async Task<GenericResponse<ParameterEvent>> GetParameter(ParameterEvent parameter)
+    [HttpGet]
+    [Route("get-parameter")]
+    public async Task<GenericResponse<ParameterEvent>> GetParameter()
     {
-        logger.LogInformation($"GetParameter : {parameter.Name} message from TemplateDaprAPI service");
+        var guid= Guid.NewGuid().ToString();
+        logger.LogInformation($"GetParameter : {guid} message from TemplateDaprAPI service");
 
         var response = new GenericResponse<ParameterEvent>
         {
-            Data = parameter
+            Data = new ParameterEvent { Name = guid },
         };
 
         return response;

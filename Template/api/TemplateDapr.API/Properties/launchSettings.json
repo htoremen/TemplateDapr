@@ -9,22 +9,12 @@
     }
   },
   "profiles": {
-    "http": {
-      "commandName": "Project",
-      "dotnetRunMessages": true,
-      "launchBrowser": true,
-      "launchUrl": "swagger",
-      "applicationUrl": "http://localhost:5123",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
     "https": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "applicationUrl": "https://localhost:7011;http://localhost:5123",
+      "applicationUrl": "https://localhost:7011",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -36,6 +26,12 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
+    },
+    "dapr-self-hosted": {
+      "commandName": "Executable",
+      "executablePath": "dapr",
+      "commandLineArgs": "dapr run --app-id TemplateDaprAPI --app-port 7011 --dapr-http-port 7111 --dapr-grpc-port 7211 --resources-path ../dapr/components dotnet run",
+      "workingDirectory": "$(ProjectDir)"
     }
   }
 }
