@@ -20,7 +20,7 @@ public class CreateParameterCommandHandler : IRequestHandler<CreateParameterComm
 
     public async Task<GenericResponse<bool>> Handle(CreateParameterCommand request, CancellationToken cancellationToken)
     {
-        var check = await _context.Parameters.FirstOrDefaultAsync(x=> x.Name == request.Name.Trim(), cancellationToken);
+        var check = _context.Parameters.FirstOrDefaultAsync(x=> x.Name == request.Name.Trim(), cancellationToken).Result;
         if (check != null)
             return GenericResponse<bool>.Success(false, request.Name + " parametresi sistede kayıtlı", 201);
 

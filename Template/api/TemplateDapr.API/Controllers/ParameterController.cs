@@ -38,7 +38,10 @@ public class ParameterController : ControllerBase
     {
         try
         {
-            await _daprClient.PublishEventAsync(PubsubNames.RabbitMQ, TopicNames.CreateParameter, parameter);
+            for (int i = 0; i < 10000; i++)
+            {
+                await _daprClient.PublishEventAsync(PubsubNames.RabbitMQ, TopicNames.CreateParameter, parameter);
+            }
             logger.LogError("pubsub.rabbitmq send : " + parameter.Name);
             return new GenericResponse<bool> { Data = true }; ;
         }
