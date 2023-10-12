@@ -34,23 +34,18 @@ public class ParameterController : ControllerBase
 
 
     [HttpPost("create-parameter")]
-    public async Task<GenericResponse<CreateParameterModel>> CreateParameter(CreateParameterModel parameter)
+    public async Task<GenericResponse<bool>> CreateParameter(CreateParameterModel parameter)
     {
         try
         {
-            var response = new GenericResponse<CreateParameterModel>
-            {
-                Data = parameter
-            };
-
             await _daprClient.PublishEventAsync("rabbitmq-pubsub", TopicNames.CreateParameter, parameter);
-            logger.LogError("pubsub.kafka send : " + parameter.Name);
-            return response;
+            logger.LogError("pubsub.rabbitmq send : " + parameter.Name);
+            return new GenericResponse<bool> { Data = true }; ;
         }
         catch (Exception ex)
         {
-            logger.LogError("CreateParameter pubsub.kafka : " + ex.Message);
+            logger.LogError("CreateParameter pubsub.rabbitmq : " + ex.Message);
         }
-        return new GenericResponse<CreateParameterModel> { Data = parameter };
+        return new GenericResponse<bool> { Data = false };
     }
 }
