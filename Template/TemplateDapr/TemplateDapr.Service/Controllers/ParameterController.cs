@@ -30,7 +30,7 @@ public class ParameterController : ControllerBase
         return response;
     }
 
-    [Topic("pubsub", "create-parameter")]
+    [Topic("rabbitmq-pubsub", "create.parameter")]
     [HttpPost("create-parameter")]
     public async Task<GenericResponse<ParameterEvent>> CreateParameter(ParameterEvent parameter)
     {

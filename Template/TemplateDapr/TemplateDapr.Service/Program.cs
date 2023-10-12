@@ -53,6 +53,9 @@ app.UseHealthChecks("/health", new HealthCheckOptions
     ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
 });
 
+
+app.UseCloudEvents();
 app.MapControllers();
+app.MapSubscribeHandler();
 
 app.Run();

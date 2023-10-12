@@ -38,8 +38,6 @@ public class ParameterController : ControllerBase
     [HttpPost("create-parameter")]
     public async Task<GenericResponse<ParameterEvent>> CreateParameter(ParameterEvent parameter)
     {
-        logger.LogInformation($"CreateParameter : {parameter.Name} message from TemplateDaprAPI service");
-
         try
         {
             var response = new GenericResponse<ParameterEvent>
@@ -47,13 +45,13 @@ public class ParameterController : ControllerBase
                 Data = parameter
             };
 
-            await _daprClient.PublishEventAsync("pubsub", "api/Parameter/create-parameter", response);
-
+            await _daprClient.PublishEventAsync("rabbitmq-pubsub", "create.parameter", parameter);
+            logger.LogError("pubsub.kafka send : " + parameter.Name);
             return response;
         }
         catch (Exception ex)
         {
-            logger.LogError("CreateParameter : " + ex.Message);
+            logger.LogError("CreateParameter pubsub.kafka : " + ex.Message);
         }
         return new GenericResponse<ParameterEvent> { Data = parameter };
     }
