@@ -26,6 +26,11 @@ public class GenericResponse<T>
     {
         return new GenericResponse<T> { Data = default(T), StatusCode = statusCode, Message = message };
     }
+    public static GenericResponse<T> Success(T data, string message, int statusCode)
+    {
+        return new GenericResponse<T> { Data = data, StatusCode = statusCode, Message = message };
+    }
+
 
     public static GenericResponse<T> Fail(string error, int statusCode)
     {

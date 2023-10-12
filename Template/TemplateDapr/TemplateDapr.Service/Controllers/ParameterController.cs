@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 namespace Service.Controllers;
 
@@ -6,14 +7,16 @@ namespace Service.Controllers;
 public class ParameterController : ApiControllerBase
 {
     private readonly ILogger<ParameterController> logger;
-    public ParameterController(ILogger<ParameterController> logger)
+    private readonly IMapper _mapper;
+    public ParameterController(ILogger<ParameterController> logger, IMapper mapper)
     {
         this.logger = logger;
+        _mapper = mapper;
     }
 
     [HttpGet]
     [Route("get-parameter")]
-    public async Task<GenericResponse<List<ParameterModel>>> GetParameter()
+    public async Task<GenericResponse<List<CreateParameterModel>>> GetParameter()
     {
         var guid= Guid.NewGuid().ToString();
         logger.LogInformation($"GetParameter : {guid} message from TemplateDaprAPI service");
@@ -24,15 +27,12 @@ public class ParameterController : ApiControllerBase
 
     [Topic("rabbitmq-pubsub", "create.parameter")]
     [HttpPost("create-parameter")]
-    public async Task<GenericResponse<ParameterModel>> CreateParameter(ParameterModel parameter)
+    public async Task<GenericResponse<bool>> CreateParameter(CreateParameterModel model)
     {
-        logger.LogInformation($"CreateParameter : {parameter.Name} message from TemplateDaprAPI service");
+        logger.LogInformation($"CreateParameter : {model.Name} message from TemplateDaprAPI service");
 
-        var response = new GenericResponse<ParameterModel>
-        {
-            Data = parameter
-        };
-
+        var command = _mapper.Map<CreateParameterCommand>(model);
+        var response = await Mediator.Send(command);
         return response;
     }
 }

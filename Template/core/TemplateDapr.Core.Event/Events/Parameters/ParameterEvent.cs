@@ -2,6 +2,6 @@
 
 namespace Core.Event;
 
-public class ParameterEvent : ParameterModel
+public class ParameterEvent : CreateParameterModel
 {
 }

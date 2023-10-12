@@ -17,11 +17,11 @@ public class ParameterController : ControllerBase
 
     [HttpGet]
     [Route("get-parameter")]
-    public async Task<GenericResponse<List<ParameterModel>>> GetParameter()
+    public async Task<GenericResponse<List<CreateParameterModel>>> GetParameter()
     {
         try
         {
-            var response = await _daprClient.InvokeMethodAsync<GenericResponse<List<ParameterModel>>>(HttpMethod.Get, "TemplateDaprService", "/Parameter/get-parameter");
+            var response = await _daprClient.InvokeMethodAsync<GenericResponse<List<CreateParameterModel>>>(HttpMethod.Get, "TemplateDaprService", "/Parameter/get-parameter");
             logger.LogError("GetParameter Response : " + response.Data);
             return response;
         }
@@ -34,11 +34,11 @@ public class ParameterController : ControllerBase
 
 
     [HttpPost("create-parameter")]
-    public async Task<GenericResponse<ParameterModel>> CreateParameter(ParameterModel parameter)
+    public async Task<GenericResponse<CreateParameterModel>> CreateParameter(CreateParameterModel parameter)
     {
         try
         {
-            var response = new GenericResponse<ParameterModel>
+            var response = new GenericResponse<CreateParameterModel>
             {
                 Data = parameter
             };
@@ -51,6 +51,6 @@ public class ParameterController : ControllerBase
         {
             logger.LogError("CreateParameter pubsub.kafka : " + ex.Message);
         }
-        return new GenericResponse<ParameterModel> { Data = parameter };
+        return new GenericResponse<CreateParameterModel> { Data = parameter };
     }
 }

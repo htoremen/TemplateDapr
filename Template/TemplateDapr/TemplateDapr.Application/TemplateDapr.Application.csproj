@@ -17,8 +17,4 @@
     <ProjectReference Include="..\TemplateDapr.Domain\TemplateDapr.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Parameters\Command\" />
-  </ItemGroup>
-
 </Project>

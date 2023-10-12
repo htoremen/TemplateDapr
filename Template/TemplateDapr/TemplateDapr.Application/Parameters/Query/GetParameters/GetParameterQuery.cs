@@ -1,11 +1,11 @@
 ﻿namespace TemplateDapr.Application;
 
-public class GetParameterQuery: IRequest<GenericResponse<List<ParameterModel>>>
+public class GetParameterQuery: IRequest<GenericResponse<List<CreateParameterModel>>>
 {
     public string Name { get; set; }
 }
 
-public class GetParameterQueryHandler : IRequestHandler<GetParameterQuery, GenericResponse<List<ParameterModel>>>
+public class GetParameterQueryHandler : IRequestHandler<GetParameterQuery, GenericResponse<List<CreateParameterModel>>>
 {
     private readonly IApplicationDbContext _context;
     private readonly IMapper _mapper;
@@ -16,10 +16,10 @@ public class GetParameterQueryHandler : IRequestHandler<GetParameterQuery, Gener
         _mapper = mapper;
     }
 
-    public async Task<GenericResponse<List<ParameterModel>>> Handle(GetParameterQuery request, CancellationToken cancellationToken)
+    public async Task<GenericResponse<List<CreateParameterModel>>> Handle(GetParameterQuery request, CancellationToken cancellationToken)
     {
         var response = _context.Parameters.Where(x=> x.IsActive).ToList();
-        var parameters = _mapper.Map<List<ParameterModel>>(response);
-        return GenericResponse<List<ParameterModel>>.Success(parameters, 200);
+        var parameters = _mapper.Map<List<CreateParameterModel>>(response);
+        return GenericResponse<List<CreateParameterModel>>.Success(parameters, 200);
     }
 }

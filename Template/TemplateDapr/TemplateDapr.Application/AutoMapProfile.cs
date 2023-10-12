@@ -1,9 +1,12 @@
-﻿namespace Application;
+﻿using TemplateDapr.Application;
+
+namespace Application;
 
 public class AutoMapProfile : Profile
 {
     public AutoMapProfile()
     {
-        CreateMap<Parameter, ParameterModel>();
+        CreateMap<Parameter, CreateParameterModel>();
+        CreateMap<CreateParameterModel, CreateParameterCommand>();
     }
 }
