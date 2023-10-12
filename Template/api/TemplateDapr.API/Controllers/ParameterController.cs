@@ -21,7 +21,7 @@ public class ParameterController : ControllerBase
     {
         try
         {
-            var response = await _daprClient.InvokeMethodAsync<GenericResponse<List<CreateParameterModel>>>(HttpMethod.Get, "TemplateDaprService", "/Parameter/get-parameter");
+            var response = await _daprClient.InvokeMethodAsync<GenericResponse<List<CreateParameterModel>>>(HttpMethod.Get, TemplateDaprService.TemplateDaprServiceName, TemplateDaprService.GetParameter);
             logger.LogError("GetParameter Response : " + response.Data);
             return response;
         }
@@ -38,7 +38,7 @@ public class ParameterController : ControllerBase
     {
         try
         {
-            await _daprClient.PublishEventAsync("rabbitmq-pubsub", TopicNames.CreateParameter, parameter);
+            await _daprClient.PublishEventAsync(PubsubNames.RabbitMQ, TopicNames.CreateParameter, parameter);
             logger.LogError("pubsub.rabbitmq send : " + parameter.Name);
             return new GenericResponse<bool> { Data = true }; ;
         }
