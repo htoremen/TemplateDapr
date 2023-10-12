@@ -1,12 +1,9 @@
-﻿using AutoMapper;
+﻿namespace Application;
 
-namespace Application
+public class AutoMapProfile : Profile
 {
-    public class AutoMapProfile : Profile
+    public AutoMapProfile()
     {
-        public AutoMapProfile()
-        {
-
-        }
+        CreateMap<Parameter, ParameterModel>();
     }
 }

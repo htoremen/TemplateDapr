@@ -1,7 +1,4 @@
-﻿using Core.Common;
-using Dapr.Client;
-using Microsoft.AspNetCore.Mvc;
-using Core.Event.Events;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
 
@@ -20,32 +17,33 @@ public class ParameterController : ControllerBase
 
     [HttpGet]
     [Route("get-parameter")]
-    public async Task<GenericResponse<ParameterEvent>> GetParameter()
+    public async Task<GenericResponse<List<ParameterModel>>> GetParameter()
     {
         try
         {
-            var response = await _daprClient.InvokeMethodAsync<GenericResponse<ParameterEvent>>(HttpMethod.Get, "TemplateDaprService", "/Parameter/get-parameter");
+            var response = await _daprClient.InvokeMethodAsync<GenericResponse<List<ParameterModel>>>(HttpMethod.Get, "TemplateDaprService", "/Parameter/get-parameter");
+            logger.LogError("GetParameter Response : " + response.Data);
             return response;
         }
         catch (Exception ex)
         {
             logger.LogError("GetParameter : " + ex.Message);
         }
-        return new GenericResponse<ParameterEvent>();
+        return null;
     }
 
 
     [HttpPost("create-parameter")]
-    public async Task<GenericResponse<ParameterEvent>> CreateParameter(ParameterEvent parameter)
+    public async Task<GenericResponse<ParameterModel>> CreateParameter(ParameterModel parameter)
     {
         try
         {
-            var response = new GenericResponse<ParameterEvent>
+            var response = new GenericResponse<ParameterModel>
             {
                 Data = parameter
             };
 
-            await _daprClient.PublishEventAsync("rabbitmq-pubsub", "create.parameter", parameter);
+            await _daprClient.PublishEventAsync("rabbitmq-pubsub", TopicNames.CreateParameter, parameter);
             logger.LogError("pubsub.kafka send : " + parameter.Name);
             return response;
         }
@@ -53,6 +51,6 @@ public class ParameterController : ControllerBase
         {
             logger.LogError("CreateParameter pubsub.kafka : " + ex.Message);
         }
-        return new GenericResponse<ParameterEvent> { Data = parameter };
+        return new GenericResponse<ParameterModel> { Data = parameter };
     }
 }
