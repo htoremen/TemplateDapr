@@ -21,6 +21,17 @@ public static class ConfigureServices
         services.AddDbContext(appSettings);
         return services;
     }
+    public static IServiceCollection AddInfrastructure2(this IServiceCollection services, AppSettings appSettings)
+    {
+        services.AddTransient<IDateTime, DateTimeService>();
+        services.AddScoped<IIdentityService, IdentityService>();
+        services.AddScoped<IMailService, MailService>();
+        services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+
+        services.AddDbContext(appSettings);
+        return services;
+    }
 
     private static void AddDbContext(this IServiceCollection services, AppSettings appSettings)
     {

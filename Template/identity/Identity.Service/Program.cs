@@ -17,7 +17,7 @@ var appSettings = new AppSettings();
 builder.Configuration.Bind(appSettings);
 
 builder.Services.AddApplication();
-builder.Services.AddInfrastructure(appSettings);
+builder.Services.AddInfrastructure2(appSettings);
 builder.Services.AddWebUIServices(builder, appSettings);
 builder.Services.AddHealthChecksServices(appSettings);
 
