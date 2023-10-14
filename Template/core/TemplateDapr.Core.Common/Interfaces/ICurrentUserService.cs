@@ -1,4 +1,4 @@
-﻿namespace Core.Application.Common.Interfaces;
+﻿namespace Infrastructure.Application;
 
 public interface ICurrentUserService
 {

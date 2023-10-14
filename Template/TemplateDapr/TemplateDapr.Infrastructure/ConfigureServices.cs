@@ -1,4 +1,5 @@
 ﻿using Infrastructure.Identity;
+using Infrastructure.Models;
 using Infrastructure.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
@@ -13,7 +14,6 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddScoped<IIdentityService, IdentityService>();
             services.AddScoped<IMailService, MailService>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-
 
             services.AddDbContext(appSettings);
             return services;

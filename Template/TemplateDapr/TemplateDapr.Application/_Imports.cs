@@ -1,6 +1,6 @@
-﻿global using Application.Common.Interfaces;
+﻿global using Application;
 global using Domain.Entities;
-global using Core.Common;
-global using TemplateDapr.Core;
+global using Infrastructure.Common;
+global using Infrastructure.Models;
 global using AutoMapper;
 global using MediatR;

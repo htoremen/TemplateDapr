@@ -1,4 +1,5 @@
 using AutoMapper;
+using Infrastructure.Models;
 using Microsoft.AspNetCore.Mvc;
 namespace Service.Controllers;
 

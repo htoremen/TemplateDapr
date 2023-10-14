@@ -1,7 +1,7 @@
-﻿using Core.Common;
-using Core.Event.Models;
+﻿using Infrastructure.Common;
+using Infrastructure.Models;
 
-namespace Core.Application.Common.Interfaces;
+namespace Infrastructure.Application;
 
 public interface IMailService
 {

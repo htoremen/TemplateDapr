@@ -1,5 +1,6 @@
 using Application;
 using HealthChecks.UI.Client;
+using Infrastructure.Models;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using TemplateDapr.Service.Service;
 

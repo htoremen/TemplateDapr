@@ -1,6 +1,6 @@
 ﻿using Application.Common.Behaviours;
 using Application.Extensions;
-using Core.Application.Common.Behaviours;
+using Infrastructure.Application.Common.Behaviours;
 using FluentValidation;
 using MediatR;
 using MediatR.Pipeline;

@@ -1,4 +1,4 @@
-﻿namespace TemplateDapr.Core;
+﻿namespace Core;
 
 public static class TemplateDaprService
 {

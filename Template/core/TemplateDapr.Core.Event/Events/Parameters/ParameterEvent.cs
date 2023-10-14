@@ -1,6 +1,6 @@
-﻿using TemplateDapr.Core;
+﻿
 
-namespace Core.Event;
+namespace Infrastructure.Event;
 
 public class ParameterEvent : CreateParameterModel
 {

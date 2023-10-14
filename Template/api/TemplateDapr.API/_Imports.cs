@@ -1,4 +1,5 @@
-﻿global using Core.Infrastructure;
-global using Core.Common;
+﻿global using Infrastructure;
+global using Infrastructure.Common;
 global using Dapr.Client;
-global using TemplateDapr.Core;
+global using Core;
+global using Infrastructure.Models;

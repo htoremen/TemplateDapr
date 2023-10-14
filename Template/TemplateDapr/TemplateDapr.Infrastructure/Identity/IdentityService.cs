@@ -1,4 +1,4 @@
-﻿using Core.Application.Common.Models;
+﻿using Infrastructure.Application.Common.Models;
 
 namespace Infrastructure.Identity
 {

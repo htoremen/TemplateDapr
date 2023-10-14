@@ -1,8 +1,4 @@
-﻿
-using Core.Application.Common.Interfaces;
-using Core.Common;
-using Core.Event.Models;
-using Core.Infrastructure;
+﻿using Infrastructure.Models;
 using MailKit.Net.Smtp;
 using MailKit.Security;
 using Microsoft.Extensions.Options;

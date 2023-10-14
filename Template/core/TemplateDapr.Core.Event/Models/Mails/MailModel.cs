@@ -1,4 +1,4 @@
-﻿namespace Core.Event.Models;
+﻿namespace Infrastructure.Models;
 
 public class MailModel
 {  

@@ -1,5 +1,6 @@
 using System.Text.Json;
 using HealthChecks.UI.Client;
+using Infrastructure;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using TemplateDapr.API.Service;
 

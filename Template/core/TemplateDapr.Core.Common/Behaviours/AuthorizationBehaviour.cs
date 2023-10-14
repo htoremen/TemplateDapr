@@ -1,9 +1,9 @@
-﻿using Core.Application.Common.Exceptions;
-using Core.Application.Common.Interfaces;
-using Core.Application.Common.Security;
+﻿using Infrastructure.Application.Common.Exceptions;
+using Infrastructure.Application;
+using Infrastructure.Application.Common.Security;
 using MediatR;
 
-namespace Core.Application.Common.Behaviours;
+namespace Infrastructure.Application.Common.Behaviours;
 
 public class AuthorizationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>    where TRequest : IRequest<TResponse>
 {

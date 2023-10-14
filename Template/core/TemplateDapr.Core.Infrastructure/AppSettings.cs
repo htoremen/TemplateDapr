@@ -1,6 +1,4 @@
-﻿using Core.Application.Common.Interfaces;
-
-namespace Core.Infrastructure;
+﻿namespace Infrastructure.Models;
 
 public class AppSettings
 {

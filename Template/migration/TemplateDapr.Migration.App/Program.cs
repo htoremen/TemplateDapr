@@ -1,5 +1,5 @@
 ﻿using Application;
-using Core.Infrastructure;
+using Infrastructure.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;

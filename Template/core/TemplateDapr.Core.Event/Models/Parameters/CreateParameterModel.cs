@@ -1,4 +1,4 @@
-﻿namespace TemplateDapr.Core;
+﻿namespace Infrastructure.Models;
 
 public class CreateParameterModel
 {

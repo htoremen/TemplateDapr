@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Authenticates\Commands\CreateUsers\CreateUserCommand.cs~RF4370b745.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\TemplateDapr\TemplateDapr.Infrastructure\TemplateDapr.Infrastructure.csproj" />
+    <ProjectReference Include="..\Identity.Domain\Identity.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

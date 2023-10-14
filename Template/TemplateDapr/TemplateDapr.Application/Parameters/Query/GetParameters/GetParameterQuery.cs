@@ -1,4 +1,5 @@
-﻿namespace TemplateDapr.Application;
+﻿
+namespace TemplateDapr.Application;
 
 public class GetParameterQuery: IRequest<GenericResponse<List<CreateParameterModel>>>
 {

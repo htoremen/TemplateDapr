@@ -1,4 +1,4 @@
-﻿namespace Core.Application.Common.Models;
+﻿namespace Infrastructure.Application.Common.Models;
 
 public class Result
 {

@@ -1,7 +1,7 @@
 ﻿using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Core.Common;
+namespace Infrastructure.Common;
 
 public class GenericResponse<T>
 {

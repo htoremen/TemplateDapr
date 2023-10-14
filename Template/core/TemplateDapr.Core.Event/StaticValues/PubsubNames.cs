@@ -1,4 +1,4 @@
-﻿namespace TemplateDapr.Core;
+﻿namespace Core;
 public static class PubsubNames
 {
     public static string RabbitMQ { get; set; } = "rabbitmq-pubsub";
