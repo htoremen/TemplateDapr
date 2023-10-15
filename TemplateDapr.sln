@@ -61,7 +61,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.Infrastructure", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.Service", "Template\identity\Identity.Service\Identity.Service.csproj", "{8A28C955-25B0-4D70-AB78-E93C3CF7B39C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Migration.App", "Template\identity\Identity.Migration.App\Identity.Migration.App.csproj", "{65EE432D-53A3-4B14-9BE7-6B75FC04B97F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.Migration.App", "Template\identity\Identity.Migration.App\Identity.Migration.App.csproj", "{65EE432D-53A3-4B14-9BE7-6B75FC04B97F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
