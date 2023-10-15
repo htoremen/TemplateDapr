@@ -1,0 +1,1 @@
+dapr run --app-id Apigateway --app-port 7010 --dapr-http-port 7110 --dapr-grpc-port 7210 --app-protocol https --resources-path ../dapr/components dotnet run

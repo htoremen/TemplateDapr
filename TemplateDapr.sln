@@ -63,6 +63,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.Service", "Templat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.Migration.App", "Template\identity\Identity.Migration.App\Identity.Migration.App.csproj", "{65EE432D-53A3-4B14-9BE7-6B75FC04B97F}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateway", "Template\apigateway\ApiGateway\ApiGateway.csproj", "{443D6E13-F2A0-4712-B276-6C5A90CE8D5E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -125,6 +127,10 @@ Global
 		{65EE432D-53A3-4B14-9BE7-6B75FC04B97F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65EE432D-53A3-4B14-9BE7-6B75FC04B97F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65EE432D-53A3-4B14-9BE7-6B75FC04B97F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{443D6E13-F2A0-4712-B276-6C5A90CE8D5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{443D6E13-F2A0-4712-B276-6C5A90CE8D5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{443D6E13-F2A0-4712-B276-6C5A90CE8D5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{443D6E13-F2A0-4712-B276-6C5A90CE8D5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -158,6 +164,7 @@ Global
 		{1A2A3135-8306-44FB-B6C4-B0FB10CD63FD} = {F85AA911-5D27-4665-8DB7-D698B2D7A79B}
 		{8A28C955-25B0-4D70-AB78-E93C3CF7B39C} = {F85AA911-5D27-4665-8DB7-D698B2D7A79B}
 		{65EE432D-53A3-4B14-9BE7-6B75FC04B97F} = {F85AA911-5D27-4665-8DB7-D698B2D7A79B}
+		{443D6E13-F2A0-4712-B276-6C5A90CE8D5E} = {5956F868-8513-4B92-BC22-E0763744B5EE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D03AD894-6123-4825-A90D-0A13884ED4DB}
