@@ -10,18 +10,7 @@ namespace Microsoft.Extensions.DependencyInjection;
 
 public static class ConfigureServices
 {
-    public static IServiceCollection AddInfrastructure(this IServiceCollection services, AppSettings appSettings)
-    {
-        services.AddTransient<IDateTime, DateTimeService>();
-        services.AddScoped<IIdentityService, IdentityService>();
-        services.AddScoped<IMailService, MailService>();
-        services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-
-
-        services.AddDbContext(appSettings);
-        return services;
-    }
-    public static IServiceCollection AddInfrastructure2(this IServiceCollection services, AppSettings appSettings)
+    public static IServiceCollection AddInfrastructureService(this IServiceCollection services, AppSettings appSettings)
     {
         services.AddTransient<IDateTime, DateTimeService>();
         services.AddScoped<IIdentityService, IdentityService>();
