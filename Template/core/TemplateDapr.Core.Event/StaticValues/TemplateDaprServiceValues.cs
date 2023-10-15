@@ -1,6 +1,6 @@
 ﻿namespace Core;
 
-public static class TemplateDaprService
+public static class TemplateDaprServiceValues
 {
     public static string TemplateDaprServiceName { get; set; } = "TemplateDaprService";
 

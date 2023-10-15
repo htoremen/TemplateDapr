@@ -2,13 +2,13 @@
 
 namespace Identity.Application.Authenticates;
 
-public class CreateUserCommand : CreateUserModel, IRequest<GenericResponse<CreateUserResponse>>
+public class CreateUserCommand : CreateUserModel, IRequest<GenericResponse<bool>>
 {
     public LoginType LoginType { get; set; }
     public string UserId {  get; set; }
 }
 
-public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, GenericResponse<CreateUserResponse>>
+public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, GenericResponse<bool>>
 {
     private readonly IApplicationDbContext _context;
 
@@ -17,7 +17,7 @@ public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, Gener
         _context = context;
     }
 
-    public async Task<GenericResponse<CreateUserResponse>> Handle(CreateUserCommand request, CancellationToken cancellationToken)
+    public async Task<GenericResponse<bool>> Handle(CreateUserCommand request, CancellationToken cancellationToken)
     {
         var check = await _context.Users.FirstOrDefaultAsync(x => x.UserDetail.Email.ToLower() == request.Email.Trim().ToLower());
         if (check == null)
@@ -52,11 +52,11 @@ public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, Gener
             }
 
             await _context.SaveChangesAsync(cancellationToken);
-            return GenericResponse<CreateUserResponse>.Success(new CreateUserResponse { }, 200);
+            return GenericResponse<bool>.Success(true, 200);
         }
         else
         {
-            return GenericResponse<CreateUserResponse>.Success("Mail adresi sistemde kayıtlıdır.", 200);
+            return GenericResponse<bool>.Success("Mail adresi sistemde kayıtlıdır.", 200);
         }
     }
 }

@@ -21,7 +21,7 @@ public class ParameterController : ControllerBase
     {
         try
         {
-            var response = await _daprClient.InvokeMethodAsync<GenericResponse<List<CreateParameterModel>>>(HttpMethod.Get, TemplateDaprService.TemplateDaprServiceName, TemplateDaprService.GetParameter);
+            var response = await _daprClient.InvokeMethodAsync<GenericResponse<List<CreateParameterModel>>>(HttpMethod.Get, TemplateDaprServiceValues.TemplateDaprServiceName, TemplateDaprServiceValues.GetParameter);
             logger.LogError("GetParameter Response : " + response.Data);
             return response;
         }
