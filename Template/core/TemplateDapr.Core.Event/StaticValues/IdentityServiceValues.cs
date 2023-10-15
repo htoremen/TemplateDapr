@@ -9,4 +9,8 @@ public static class IdentityServiceValues
     public static string ForgotPassword { get; set; } = "forgot-password";
     public static string UpdatedPassword { get; set; } = "update-password";
     public static string RefreshToken { get; set; } = "refresh-token";
+
+    public static string UpdatePassword { get; set; } = "update-password";
+    public static string UpdateUserName { get; set; } = "update-username";
+    public static string SignOut { get; set; } = "sign-out";
 }

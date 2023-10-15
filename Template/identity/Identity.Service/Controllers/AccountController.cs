@@ -12,7 +12,7 @@ public class AccountController : ApiControllerBase
 {
     [HttpPost]
     [Route("update-password")]
-    public async Task<GenericResponse<UpdatePasswordResponse>> UpdatePassword(UpdatePasswordModel model)
+    public async Task<GenericResponse<bool>> UpdatePassword(UpdatePasswordModel model)
     {
         var command = Mapper.Map<UpdatePasswordCommand>(model);
         var userId = UserService.UserId;
@@ -24,7 +24,7 @@ public class AccountController : ApiControllerBase
 
     [HttpPost]
     [Route("update-username")]
-    public async Task<GenericResponse<UpdateUserNameResponse>> UpdateUserName(UpdateUserNameModel model)
+    public async Task<GenericResponse<bool>> UpdateUserName(UpdateUserNameModel model)
     {
         var command = Mapper.Map<UpdateUserNameCommand>(model);
 
