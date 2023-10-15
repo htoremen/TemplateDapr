@@ -43,6 +43,7 @@ public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, Gener
             {
                 newUser.UserRegisterStages.Add(new UserRegisterStage
                 {
+                    UserRegisterStageId = Guid.NewGuid().ToString(),
                     ParameterId = item.ParameterId,
                     ParameterTypeId = item.ParameterTypeId,
                     UserId = request.UserId,

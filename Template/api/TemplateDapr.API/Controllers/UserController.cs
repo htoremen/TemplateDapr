@@ -16,28 +16,32 @@ public class UserController : ControllerBase
         this.logger = logger;
     }
 
-    [AllowAnonymous]
     [HttpPost]
     [Route("login")]
     public async Task<GenericResponse<LoginResponseModel>> Login(LoginViewModel model)
     {
-        var response = await _daprClient.InvokeMethodAsync<GenericResponse<LoginResponseModel>>(HttpMethod.Post, IdentityServiceValues.ServiceName, IdentityServiceValues.Login);
+        var response = await _daprClient.InvokeMethodAsync<GenericResponse<LoginResponseModel>>
+            (HttpMethod.Post,
+            IdentityServiceValues.ServiceName,
+            IdentityServiceValues.Login);
         return response;
     }
 
     [HttpPost]
-    [AllowAnonymous]
     [Route("create-user")]
     public async Task<GenericResponse<bool>> CreateUser(CreateUserModel model)
     {
-        var response = await _daprClient.InvokeMethodAsync<GenericResponse<bool>>(HttpMethod.Post, IdentityServiceValues.ServiceName, IdentityServiceValues.CreateUser);
+        var request = _daprClient.CreateInvokeMethodRequest(HttpMethod.Post,
+            IdentityServiceValues.ServiceName,
+            IdentityServiceValues.CreateUser,
+            model);    
+        var response = await _daprClient.InvokeMethodAsync<GenericResponse<bool>>(request);
 
         return response;
     }
 
 
     [HttpPost]
-    [AllowAnonymous]
     [Route("forgot-password")]
     public async Task<GenericResponse<bool>> ForgotPassword(ForgotPasswordModel model)
     {
@@ -47,7 +51,6 @@ public class UserController : ControllerBase
     }
 
     [HttpPost]
-    [AllowAnonymous]
     [Route("update-password")]
     public async Task<GenericResponse<bool>> UpdatePassword(ForgotUpdatePasswordModel model)
     {
@@ -57,7 +60,6 @@ public class UserController : ControllerBase
     }
 
     [HttpPost]
-    [AllowAnonymous]
     [Route("refresh-token")]
     public async Task<IActionResult> RefreshToken()
     {

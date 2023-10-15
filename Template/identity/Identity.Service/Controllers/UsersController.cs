@@ -93,7 +93,6 @@ namespace Identity.API.Controllers
         }
 
         [HttpPost]
-        [AllowAnonymous]
         [Route("create-user")]
         public async Task<GenericResponse<bool>> CreateUser(CreateUserModel model)
         {
