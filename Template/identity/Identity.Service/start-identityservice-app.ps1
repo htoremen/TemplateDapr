@@ -1,0 +1,1 @@
+dapr run --app-id IdentityService --app-port 70123 --dapr-http-port 71123 --dapr-grpc-port 72123 --app-protocol https --resources-path ../dapr/components dotnet run
