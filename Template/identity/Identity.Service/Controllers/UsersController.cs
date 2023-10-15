@@ -95,7 +95,7 @@ namespace Identity.API.Controllers
         [HttpPost]
         [AllowAnonymous]
         [Route("create-user")]
-        public async Task<GenericResponse<CreateUserResponse>> CreateUser(CreateUserModel model)
+        public async Task<GenericResponse<bool>> CreateUser(CreateUserModel model)
         {
             var command = Mapper.Map<CreateUserCommand>(model);
             command.LoginType = Domain.Enums.LoginType.Web;
