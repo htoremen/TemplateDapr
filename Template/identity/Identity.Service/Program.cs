@@ -1,4 +1,3 @@
-using Application;
 using HealthChecks.UI.Client;
 using Identity.Service.Service;
 using Infrastructure.Models;
@@ -16,7 +15,7 @@ builder.Services.AddSwaggerGen();
 var appSettings = new AppSettings();
 builder.Configuration.Bind(appSettings);
 
-builder.Services.AddApplication();
+builder.Services.AddApplication(appSettings);
 builder.Services.AddInfrastructureService(appSettings);
 builder.Services.AddWebUIServices(builder, appSettings);
 builder.Services.AddHealthChecksServices(appSettings);

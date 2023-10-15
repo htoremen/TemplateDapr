@@ -1,4 +1,5 @@
 using AutoMapper;
+using Identity.Application;
 using Infrastructure.Models;
 using Microsoft.AspNetCore.Mvc;
 

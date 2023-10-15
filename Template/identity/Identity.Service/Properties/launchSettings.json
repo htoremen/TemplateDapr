@@ -4,7 +4,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:32096",
+      "applicationUrl": "http://localhost:32097",
       "sslPort": 44366
     }
   },
@@ -14,7 +14,7 @@
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "applicationUrl": "https://localhost:7012",
+      "applicationUrl": "https://localhost:7013",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -30,7 +30,7 @@
     "dapr-self-hosted": {
       "commandName": "Executable",
       "executablePath": "dapr",
-      "commandLineArgs": "dapr run --app-id TemplateDaprService --app-port 7012 --dapr-http-port 7112 --dapr-grpc-port 7212 --resources-path ../dapr/components dotnet run",
+      "commandLineArgs": "dapr run --app-id IdentityService --app-port 7013 --dapr-http-port 7113 --dapr-grpc-port 7213 --app-protocol https --resources-path ../dapr/components dotnet run",
       "workingDirectory": "$(ProjectDir)"
     }
   }

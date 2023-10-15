@@ -1,10 +1,7 @@
 ﻿using Infrastructure.Application.Common.Behaviours;
-using Infrastructure;
 using FluentValidation;
 using Identity.Application.Common.Behaviours;
-using Identity.Application;
 using Identity.Application.Extensions;
-using MediatR;
 using MediatR.Pipeline;
 using System.Reflection;
 
@@ -25,7 +22,7 @@ public static class ConfigureServices
         services.AddTransient(typeof(IPipelineBehavior<,>), typeof(PerformanceBehaviour<,>));
         services.AddTransient(typeof(IRequestPreProcessor<>), typeof(LoggingBehaviour<>));
 
-        services.AddHttpContextAccessor();
+       // services.AddHttpContextAccessor();
 
         services.AddScoped<IJwtUtils, JwtUtils>();
         //   services

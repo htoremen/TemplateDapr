@@ -1,1 +1,1 @@
-dapr run --app-id IdentityService --app-port 7010 --dapr-http-port 7110 --dapr-grpc-port 7210 --app-protocol https --resources-path ../dapr/components dotnet run
+dapr run --app-id IdentityService --app-port 7013 --dapr-http-port 7113 --dapr-grpc-port 7213 --app-protocol https --resources-path ../dapr/components dotnet run

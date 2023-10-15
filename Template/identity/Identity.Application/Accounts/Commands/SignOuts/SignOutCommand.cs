@@ -1,4 +1,7 @@
 ﻿
+using MediatR;
+using Microsoft.AspNetCore.Http;
+
 namespace Identity.Application.Accounts;
 
 public class SignOutCommand : IRequest<GenericResponse<bool>>

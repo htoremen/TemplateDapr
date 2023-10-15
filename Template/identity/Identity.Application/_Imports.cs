@@ -7,3 +7,4 @@ global using Microsoft.EntityFrameworkCore;
 global using Infrastructure.Common;
 global using Microsoft.AspNetCore.Http;
 global using Infrastructure.Models;
+global using AutoMapper;
