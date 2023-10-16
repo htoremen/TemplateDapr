@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Service.Controllers
 {
-    [Route("[controller]")]
     [ApiController]
     public class ParameterController : ApiControllerBase
     {

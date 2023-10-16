@@ -9,7 +9,7 @@ using Service.Controllers;
 
 namespace Identity.API.Controllers
 {
-    public class UsersController : ApiControllerBase
+    public class UserController : ApiControllerBase
     {
         [AllowAnonymous]
         [HttpGet]

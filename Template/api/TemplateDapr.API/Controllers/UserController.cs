@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace TemplateDapr.API.Controllers;
 
-[Route("api/[controller]")]
+[Route("[controller]")]
 [ApiController]
 public class UserController : ControllerBase
 {
@@ -20,10 +20,12 @@ public class UserController : ControllerBase
     [Route("login")]
     public async Task<GenericResponse<LoginResponseModel>> Login(LoginViewModel model)
     {
-        var response = await _daprClient.InvokeMethodAsync<GenericResponse<LoginResponseModel>>
-            (HttpMethod.Post,
+        var request = _daprClient.CreateInvokeMethodRequest(HttpMethod.Post,
             IdentityServiceValues.ServiceName,
-            IdentityServiceValues.Login);
+            IdentityServiceValues.Login,
+            model);
+
+        var response = await _daprClient.InvokeMethodAsync<GenericResponse<LoginResponseModel>>(request);
         return response;
     }
 

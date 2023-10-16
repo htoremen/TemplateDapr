@@ -6,7 +6,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 6011
+          "Port": 7013
         }
       ],
       "RateLimitOptions": {
@@ -24,12 +24,12 @@
     },
 
     {
-      "DownstreamPathTemplate": "/api/users/login",
+      "DownstreamPathTemplate": "/users/login",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 6011
+          "Port": 7013
         }
       ],
       "RateLimitOptions": {
@@ -52,7 +52,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 6011
+          "Port": 7013
         }
       ],
       "RateLimitOptions": {
@@ -75,7 +75,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 6011
+          "Port": 7013
         }
       ],
       "RateLimitOptions": {
@@ -98,7 +98,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 6011
+          "Port": 7013
         }
       ],
       "RateLimitOptions": {
@@ -116,12 +116,12 @@
     },
 
     {
-      "DownstreamPathTemplate": "/api/users/external-create-user",
+      "DownstreamPathTemplate": "/users/external-create-user",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 6011
+          "Port": 7013
         }
       ],
       "RateLimitOptions": {
@@ -144,7 +144,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 6011
+          "Port": 7013
         }
       ],
       "RateLimitOptions": {
@@ -167,7 +167,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 6011
+          "Port": 7013
         }
       ],
       "RateLimitOptions": {
@@ -190,7 +190,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 6011
+          "Port": 7013
         }
       ],
       "RateLimitOptions": {
@@ -209,6 +209,6 @@
 
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:6010"
+    "BaseUrl": "https://localhost:7010"
   }
 }

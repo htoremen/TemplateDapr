@@ -6,7 +6,6 @@ using Service.Controllers;
 
 namespace Identity.Service.Controllers;
 
-[Route("api/[controller]")]
 [ApiController]
 public class AccountController : ApiControllerBase
 {
