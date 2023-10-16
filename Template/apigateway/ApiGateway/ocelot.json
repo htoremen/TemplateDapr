@@ -1,12 +1,12 @@
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/users/register-state",
+      "DownstreamPathTemplate": "/api/user/register-state",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7013
+          "Port": 7011
         }
       ],
       "RateLimitOptions": {
@@ -19,17 +19,17 @@
         "TtlSeconds": 30,
         "Region": "login"
       },
-      "UpstreamPathTemplate": "/users/register-state",
+      "UpstreamPathTemplate": "/user/register-state",
       "UpstreamHttpMethod": [ "GET" ]
     },
 
     {
-      "DownstreamPathTemplate": "/users/login",
+      "DownstreamPathTemplate": "/user/login",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7013
+          "Port": 7011
         }
       ],
       "RateLimitOptions": {
@@ -42,17 +42,17 @@
         "TtlSeconds": 30,
         "Region": "login"
       },
-      "UpstreamPathTemplate": "/users/login",
+      "UpstreamPathTemplate": "/user/login",
       "UpstreamHttpMethod": [ "POST" ]
     },
 
     {
-      "DownstreamPathTemplate": "/api/users/signin-google",
+      "DownstreamPathTemplate": "/user/signin-google",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7013
+          "Port": 7011
         }
       ],
       "RateLimitOptions": {
@@ -70,12 +70,12 @@
     },
 
     {
-      "DownstreamPathTemplate": "/api/users/googleresponse",
+      "DownstreamPathTemplate": "/user/googleresponse",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7013
+          "Port": 7011
         }
       ],
       "RateLimitOptions": {
@@ -93,12 +93,12 @@
     },
 
     {
-      "DownstreamPathTemplate": "/api/users/create-user",
+      "DownstreamPathTemplate": "/user/create-user",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7013
+          "Port": 7011
         }
       ],
       "RateLimitOptions": {
@@ -111,17 +111,17 @@
         "TtlSeconds": 30,
         "Region": "login"
       },
-      "UpstreamPathTemplate": "/users/create-user",
+      "UpstreamPathTemplate": "/user/create-user",
       "UpstreamHttpMethod": [ "POST" ]
     },
 
     {
-      "DownstreamPathTemplate": "/users/external-create-user",
+      "DownstreamPathTemplate": "/user/external-create-user",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7013
+          "Port": 7011
         }
       ],
       "RateLimitOptions": {
@@ -134,17 +134,17 @@
         "TtlSeconds": 30,
         "Region": "login"
       },
-      "UpstreamPathTemplate": "/users/external-create-user",
+      "UpstreamPathTemplate": "/user/external-create-user",
       "UpstreamHttpMethod": [ "POST" ]
     },
 
     {
-      "DownstreamPathTemplate": "/api/users/forgot-password",
+      "DownstreamPathTemplate": "/user/forgot-password",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7013
+          "Port": 7011
         }
       ],
       "RateLimitOptions": {
@@ -157,17 +157,17 @@
         "TtlSeconds": 30,
         "Region": "login"
       },
-      "UpstreamPathTemplate": "/users/forgot-password",
+      "UpstreamPathTemplate": "/user/forgot-password",
       "UpstreamHttpMethod": [ "POST" ]
     },
 
     {
-      "DownstreamPathTemplate": "/api/users/update-password",
+      "DownstreamPathTemplate": "/user/update-password",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7013
+          "Port": 7011
         }
       ],
       "RateLimitOptions": {
@@ -180,17 +180,17 @@
         "TtlSeconds": 30,
         "Region": "login"
       },
-      "UpstreamPathTemplate": "/users/update-password",
+      "UpstreamPathTemplate": "/user/update-password",
       "UpstreamHttpMethod": [ "POST" ]
     },
 
     {
-      "DownstreamPathTemplate": "/api/account/update-password",
+      "DownstreamPathTemplate": "/account/update-password",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7013
+          "Port": 7011
         }
       ],
       "RateLimitOptions": {
