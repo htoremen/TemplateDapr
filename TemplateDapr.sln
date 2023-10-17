@@ -65,6 +65,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.Migration.App", "T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateway", "Template\apigateway\ApiGateway\ApiGateway.csproj", "{443D6E13-F2A0-4712-B276-6C5A90CE8D5E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{0324060B-8307-4DA8-AA34-14F175103C6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Application.FunctionalTests", "Template\identity\Identity.Application.FunctionalTests\Identity.Application.FunctionalTests.csproj", "{BB49A709-9AAA-4A79-B72D-89C53F9900B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -131,6 +135,10 @@ Global
 		{443D6E13-F2A0-4712-B276-6C5A90CE8D5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{443D6E13-F2A0-4712-B276-6C5A90CE8D5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{443D6E13-F2A0-4712-B276-6C5A90CE8D5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB49A709-9AAA-4A79-B72D-89C53F9900B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB49A709-9AAA-4A79-B72D-89C53F9900B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB49A709-9AAA-4A79-B72D-89C53F9900B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB49A709-9AAA-4A79-B72D-89C53F9900B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -165,6 +173,8 @@ Global
 		{8A28C955-25B0-4D70-AB78-E93C3CF7B39C} = {F85AA911-5D27-4665-8DB7-D698B2D7A79B}
 		{65EE432D-53A3-4B14-9BE7-6B75FC04B97F} = {F85AA911-5D27-4665-8DB7-D698B2D7A79B}
 		{443D6E13-F2A0-4712-B276-6C5A90CE8D5E} = {5956F868-8513-4B92-BC22-E0763744B5EE}
+		{0324060B-8307-4DA8-AA34-14F175103C6E} = {03886E30-A02C-41F0-99B2-D2F9D45C27FA}
+		{BB49A709-9AAA-4A79-B72D-89C53F9900B6} = {F85AA911-5D27-4665-8DB7-D698B2D7A79B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D03AD894-6123-4825-A90D-0A13884ED4DB}
