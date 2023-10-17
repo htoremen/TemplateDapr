@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Identity.Application.Authenticates;
+namespace Identity.Application.Users;
 
 public class UserRefreshTokenResponse
 {

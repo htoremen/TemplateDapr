@@ -2,7 +2,7 @@
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace Identity.Application.Authenticates;
+namespace Identity.Application.Users;
 public class UserRegisterStageQuery : IRequest<GenericResponse<List<UserRegisterStageQueryResponse>>>
 {
     public string ParameterTypeId {  get; set; }    

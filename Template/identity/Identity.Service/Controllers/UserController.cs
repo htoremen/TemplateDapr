@@ -1,4 +1,4 @@
-﻿using Identity.Application.Authenticates;
+﻿using Identity.Application.Users;
 using Infrastructure.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;

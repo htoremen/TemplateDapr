@@ -1,4 +1,4 @@
-﻿namespace Identity.Application.Authenticates;
+﻿namespace Identity.Application.Users;
 
 public class LoginCommand : LoginViewModel, IRequest<GenericResponse<LoginResponse>>
 {

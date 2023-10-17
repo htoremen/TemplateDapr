@@ -1,6 +1,6 @@
 ﻿
 
-namespace Identity.Application.Authenticates;
+namespace Identity.Application.Users;
 
 public class CreateUserCommand : CreateUserModel, IRequest<GenericResponse<bool>>
 {

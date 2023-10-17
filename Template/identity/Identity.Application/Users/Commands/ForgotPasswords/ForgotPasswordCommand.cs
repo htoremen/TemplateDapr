@@ -1,6 +1,6 @@
 ﻿using Infrastructure.Models.Mails;
 
-namespace Identity.Application.Authenticates;
+namespace Identity.Application.Users;
 
 public class ForgotPasswordCommand : ForgotPasswordModel, IRequest<GenericResponse<bool>>
 {

@@ -1,7 +1,7 @@
 ﻿using Identity.Application;
 using MediatR;
 
-namespace Identity.Application.Authenticates;
+namespace Identity.Application.Users;
 
 public class ForgotUpdatePasswordCommand : ForgotUpdatePasswordModel, IRequest<GenericResponse<bool>>
 {

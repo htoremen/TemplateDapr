@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Identity.Application.Accounts;
-using Identity.Application.Authenticates;
+using Identity.Application.Users;
 using Infrastructure.Models.Account;
 
 namespace Identity.Application;
