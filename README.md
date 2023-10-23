@@ -40,7 +40,7 @@ Kullanılan Teknolojiler: Dapr, RabbitMQ, Kafka, Zeebe
 # Service 5
 Kullanılan Teknolojiler: Dapr, RabbitMQ, Kafka, Zeebe
 # Service 6
-Kullanılan Teknolojiler: Dapr, Redis, RabbitMQ, Kafka, Zeebe
+Kullanılan Teknolojiler: Dapr, Zeebe, SignalR
 
 # Kullanılan Teknolojiler:
 
