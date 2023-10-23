@@ -67,7 +67,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateway", "Template\apig
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{0324060B-8307-4DA8-AA34-14F175103C6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Application.FunctionalTests", "Template\identity\Identity.Application.FunctionalTests\Identity.Application.FunctionalTests.csproj", "{BB49A709-9AAA-4A79-B72D-89C53F9900B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.Application.FunctionalTests", "Template\identity\Identity.Application.FunctionalTests\Identity.Application.FunctionalTests.csproj", "{BB49A709-9AAA-4A79-B72D-89C53F9900B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{4B8BAB96-F97D-41E3-A2FD-63A6B09D2EA5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
