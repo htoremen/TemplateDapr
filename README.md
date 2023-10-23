@@ -2,16 +2,28 @@
 
 # Proje Açıklaması:
 
-TemplateDapr, mikroservis mimarisi kullanılarak geliştirilen Safrantek tarafından başlatılan bir uygulama projesidir. Bu proje, büyük ve karmaşık bir uygulamayı daha küçük, bağımsız hizmetlere bölmek ve her bir hizmeti ayrı bir mikroservis olarak geliştirmek amacıyla oluşturulmuştur.
+TemplateDapr, mikroservis mimarisi kullanılarak geliştirilen Safrantek tarafından başlatılan bir uygulama projesidir. Bu proje, büyük ve karmaşık bir uygulamayı daha küçük, bağımsız hizmetlere bölmek ve her bir hizmeti ayrı bir mikroservis olarak geliştirmek amacıyla oluşturulmuştur. Geleneksel monolitik uygulama yapılarının dezavantajlarını aşmak ve daha etkili bir yazılım geliştirme ve dağıtma süreci sunmak için tasarlanmıştır.
 
 # Ana Amaç:
 
 # Projenin temel amaçları;
 
-Uygulama ölçeklenebilirliğini artırmak
-Hizmetler arasındaki bağımsızlığı ve yeniden kullanılabilirliği teşvik etmek
-Hızlı geliştirme ve dağıtım süreçlerini sağlamak
-Karmaşık uygulamayı daha kolay yönetilebilir hale getirmek
+- Monolitik yapılardan kaynaklanan sıkı bağımlılıkları azaltmak.
+- Uygulama bileşenlerini bağımsız olarak geliştirmek ve dağıtmak için mikroservisler kullanmak.
+- Uygulama ölçeklenebilirliğini artırmak
+- Hizmetler arasındaki bağımsızlığı ve yeniden kullanılabilirliği teşvik etmek
+- İş süreçlerini parçalara ayırarak geliştirme sürecini hızlandırmak.
+- Hızlı geliştirme ve dağıtım süreçlerini sağlamak
+- Farklı teknolojileri bir arada kullanarak dil ve çerçeve bağımsızlığı sağlamak.
+- Karmaşık uygulamayı daha kolay yönetilebilir hale getirmek
+
+# Proje Özellikleri:
+
+- Mikroservis Mimarisi: Proje, bağımsız hizmetler olarak çalışan mikroservislerden oluşur. Her bir mikroservis, belirli bir işlevi yerine getirir ve kendi verilerini yönetir.
+- Dil ve Çerçeve Bağımsızlığı: Farklı programlama dilleri ve çerçeveler kullanarak her mikroservisi geliştirebiliriz. Bu, geliştiricilere esneklik sağlar.
+- API ve Etkinlik Tabanlı İletişim: Mikroservisler arasında iletişim, API çağrıları ve etkinlik tabanlı mesajlaşma yoluyla sağlanır.
+- Veri Yönetimi ve Veritabanları: Her mikroservis, kendi veritabanını kullanır ve veri yönetimini bağımsız olarak gerçekleştirir.
+- Konteynerizasyon ve Orkestrasyon: Docker konteynerleri kullanılarak mikroservislerin paketlenmesi ve Kubernetes gibi orkestrasyon araçlarıyla dağıtılması sağlanır.
 
 # Proje Bileşenleri:
 
