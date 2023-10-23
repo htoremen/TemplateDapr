@@ -1,1 +1,1 @@
-# TemplateDapr
+# TemplateDapr Architecture
