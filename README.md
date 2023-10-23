@@ -46,11 +46,20 @@ Kullanılan Teknolojiler: Dapr, Redis, RabbitMQ, Kafka, Zeebe
 
 # Bu proje, aşağıdaki temel teknolojileri kullanmaktadır:
 
-.Net Core 
-Redis
-RabbitMQ
-Kafka
-Zeebe
+- .Net Core
+- OAuth 2.0, JWT (JSON Web Token)
+- Redis
+- RabbitMQ
+- Kafka
+- Zeebe
+- SignalR
+- Apisix
+- DAPR (Distributed Application Runtime)
+- Docker
+- Kubernetes
+- Prometheus, Grafana
+- SQL Veritabanları: PostgreSQL, MySQL, Microsoft SQL Server vb.
+- NoSQL Veritabanları: MongoDB, Cassandra, Redis vb.
 
 # Nasıl Çalışır:
 
